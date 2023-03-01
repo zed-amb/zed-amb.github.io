@@ -35,3 +35,4 @@ function calcDownpayment(costOfTheHouse) {
   console.log("expect 7500: ", calcDownpayment(100000));
   console.log("expect 25000: ", calcDownpayment(250000));
   
+  
