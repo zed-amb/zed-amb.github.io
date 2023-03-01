@@ -11,10 +11,8 @@ const prompt = require("prompt-sync")();
 • 3% for sales above $500 */
 
 
-let isSalaried = true;
-let commission = 0;
-let sales = prompt("Enter today's sales: ");
-
+function computeSalesCommission(salesAmount, isSalaried){
+    let commission = 0;
 if (isSalaried) {
     if (sales > 300 && sales < 500) {
       commission = sales * 0.01;
@@ -29,4 +27,5 @@ if (isSalaried) {
     }
   }
   
-  console.log("Your commission is: "+ commission);
+  return commission;
+}
