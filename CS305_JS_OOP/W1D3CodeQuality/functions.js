@@ -37,18 +37,20 @@ export function computeSalesCommission(salaried, sales){
     }
 }
 
-export function compoundInterest(inAmount,intRate,nYearsToCom){
 
-    let  monthlyRate = intRate / 1200;
-     let months = nYearsToCom * 12;
-    let balance= inAmount;
-     for (let i = 1; i <= months; i++ ) {
-       let  monthlybalance=monthlyRate*balance;
-        balance =balance + monthlybalance;
-      }
-      return balance.toFixed(2);
- 
- }
+
+export function compoundInterest(initialAmount, annualInterestRate, numberOfYears) {
+    let monthlyInterestRate = annualInterestRate / 1200; // 12 months in a year, 100 to convert from percentage to decimal
+    let numberOfMonths = numberOfYears * 12;
+    let balance = initialAmount;
+  
+    for (let i = 0; i < numberOfMonths; i++) {
+      balance += balance * monthlyInterestRate;
+    }
+  
+    return balance.toFixed(2); 
+  }
+  
 
  export function calcDownpayment(cost){
    
