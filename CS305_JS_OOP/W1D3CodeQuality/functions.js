@@ -1,9 +1,5 @@
 "use strict";
 /* eslint-disable*/
-   /*  export default {isVowel,computeSalesCommission,compoundInterest,calcDownpayment,
-        sumDigits,multDigits,convertFahrenheit, alcDistance }; */
-
-
 
 export function isVowel(text){
     if(text=="a"|| text=="e" || text=="i" || text=="o" || text=="u"){
