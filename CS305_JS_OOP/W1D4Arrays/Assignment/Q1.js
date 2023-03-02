@@ -1,5 +1,5 @@
 
-
+//Q1
 function maxOfThree(a, b, c){
     if(a>b && a>c){
         return a;
@@ -10,6 +10,12 @@ function maxOfThree(a, b, c){
     else if(c>a && c>b){
         return c;
     }
-    else
-    return "They are equal";
+    else{
+    return "They are equal.";
 }
+}
+
+let num = maxOfThree(3,3,3);
+console.log(num);
+
+//Q2
