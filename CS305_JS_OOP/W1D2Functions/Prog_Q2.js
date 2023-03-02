@@ -7,7 +7,7 @@ annualInterestRate	                    Annual interest rate (as a percentage)
 numberOfYears	                        Number of years for which the interest will be compounded
 Returns                             	Final balance in the savings account */
 
-function compoundInterest(initialAmount, annualInterestRate, numberOfYears) {
+export function compoundInterest(initialAmount, annualInterestRate, numberOfYears) {
     let monthlyInterestRate = annualInterestRate / 1200; // 12 months in a year, 100 to convert from percentage to decimal
     let numberOfMonths = numberOfYears * 12;
     let balance = initialAmount;

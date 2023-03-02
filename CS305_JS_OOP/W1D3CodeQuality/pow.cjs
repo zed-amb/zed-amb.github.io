@@ -5,5 +5,5 @@ function pow(x, n){
     return x**n;
 }
 
-let resukt = pow(2,3);
-console.log(resukt);
+let result = pow(2,3);
+console.log(result);
