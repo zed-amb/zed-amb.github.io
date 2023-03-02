@@ -1,8 +1,12 @@
 import assert from "node:assert/strict";
 
 import { computeSalesCommission } from "./SalesCommission.js";
-import { compoundInterest } from "/CS305/W1D2/Functions/Prog_Q2.js"
-
+import { compoundInterest } from "./functions.js";
+import { calcDownpayment } from "./functions.js";
+import { sumDigits } from "./functions.js";
+import { multDigits } from "./functions.js";
+import { convertFahrenheit } from "./functions.js";
+import { alcDistance } from "./functions.js";
 
 describe("test of ComputSalesCommission", function () {
     it("tests salaried and 200 sales", function () {

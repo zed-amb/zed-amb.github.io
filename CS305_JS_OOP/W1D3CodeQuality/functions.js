@@ -1,11 +1,11 @@
 "use strict";
 /* eslint-disable*/
-    export default {isVowel,computeSalesCommission,compoundInterest,calcDownpayment,
-        sumDigits,multDigits,convertFahrenheit, alcDistance };
+   /*  export default {isVowel,computeSalesCommission,compoundInterest,calcDownpayment,
+        sumDigits,multDigits,convertFahrenheit, alcDistance }; */
 
 
 
-function isVowel(text){
+export function isVowel(text){
     if(text=="a"|| text=="e" || text=="i" || text=="o" || text=="u"){
         return true;
     }
@@ -14,7 +14,7 @@ function isVowel(text){
     
 }
 
-function computeSalesCommission(salaried, sales){
+export function computeSalesCommission(salaried, sales){
     let commission=0;
 
     if( salaried===true){
@@ -41,7 +41,7 @@ function computeSalesCommission(salaried, sales){
     }
 }
 
-function compoundInterest(inAmount,intRate,nYearsToCom){
+export function compoundInterest(inAmount,intRate,nYearsToCom){
 
     let  monthlyRate = intRate / 1200;
      let months = nYearsToCom * 12;
@@ -54,7 +54,7 @@ function compoundInterest(inAmount,intRate,nYearsToCom){
  
  }
 
- function calcDownpayment(cost){
+ export function calcDownpayment(cost){
    
     if(cost<50000){
         return cost*0.05;
@@ -73,7 +73,7 @@ function compoundInterest(inAmount,intRate,nYearsToCom){
     }
 }
  
-function sumDigits(number){
+export function sumDigits(number){
     let sum=0;
     while(number){
         sum+=number%10;
@@ -84,7 +84,7 @@ function sumDigits(number){
 
 
 
-function multDigits(number){
+export function multDigits(number){
     let product=1;
     while(number){
         product*=number%10;
@@ -94,12 +94,12 @@ function multDigits(number){
 }
 
 
-function convertFahrenheit(temp){
+export function convertFahrenheit(temp){
     let tempInCelcius= ((temp-32)*5/9);
     return tempInCelcius.toFixed(4);
 }
 
-function  alcDistance(x1,y1,x2,y2){
+export function  alcDistance(x1,y1,x2,y2){
     let distance= Math.sqrt(((x2-x1)**2) +((y2-y1)**2));
     return distance.toFixed(2);
     
