@@ -1,5 +1,5 @@
 "use strict"
-const prompt = require("prompt-sync")();
+//const prompt = require("prompt-sync")();
 
 /* Input	                             Output
 initialAmount                        	Initial amount in the savings account
@@ -16,7 +16,7 @@ export function compoundInterest(initialAmount, annualInterestRate, numberOfYear
       balance += balance * monthlyInterestRate;
     }
   
-    return balance; 
+    return balance.toFixed(2); 
   }
   
   console.log("expect 110.47", compoundInterest(100, 10, 1));
