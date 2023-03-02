@@ -11,8 +11,6 @@
 • 3% for sales above $500 */
 
 
-
-
 export function computeSalesCommission(isSalaried, salesAmount) {
   let commission = 0;
 
