@@ -121,6 +121,24 @@ export function scoreExams(studentAnswers, correctAnswers) {
   }
 
 
+  /**
+   * 
+   * @param {Number} rows 
+   * @param {Number} cols 
+   * @returns 
+   */
+  export function generateArray(rows, cols) {
+    let result = [];
+    let counter = 1;
+    for (let i = 0; i < rows; i++) {
+      let row = [];
+      for (let j = 0; j < cols; j++) {
+        row.push(counter++);
+      }
+      result.push(row);
+    }
+    return result;
+  }
 
 
 
