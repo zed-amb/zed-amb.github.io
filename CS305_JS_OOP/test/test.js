@@ -1,5 +1,5 @@
 "use strict"
-const prompt = require("prompt-sync")();
+//const prompt = require("prompt-sync")();
 
 var assert = require('assert');
 describe('Array', function () {
@@ -9,3 +9,5 @@ describe('Array', function () {
     });
   });
 });
+
+
