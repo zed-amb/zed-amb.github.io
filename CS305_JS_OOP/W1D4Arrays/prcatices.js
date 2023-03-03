@@ -376,3 +376,56 @@ let sayHi = function(){
 
 console.log(sayHi);
 
+
+//Examples of callbacks
+/* Write a function, myCallback( func, arg). myCallback will call func
+with the given arg and then log the return value to the console.
+➢Test myCallback by calling it with a function that takes a number and returns the cube of the
+argument. First write it as "cube" a normal named function declaration, then as an anonymous
+function expression.
+➢Also test with a function that returns true if the arg is an even number
+➢ myCallback(cube, 10) → 100
+➢ myCallback(isEven, 10) → true  */
+
+// A function that takes a function and an argument, calls the function with the argument, and logs the result
+function myCallback(func, arg) {
+    const result = func(arg);
+    console.log(result);
+  }
+  
+  // A function that returns the cube of a number
+  function cube(num) {
+    return num ** 3;
+  }
+  
+  // An anonymous function expression that returns true if a number is even
+  const isEven = function(num) {
+    return num % 2 === 0;
+  };
+  
+  // Test myCallback with cube and 10
+  myCallback(cube, 10); // logs 100
+  
+  // Test myCallback with isEven and 10
+  myCallback(isEven, 10); // logs true
+
+
+
+  function funX(a, b) {
+    let c;
+    c = 5;
+    funY(a * c, "yes");
+    }
+    function funY(x, y) {
+    let z;
+    z = "I can see the sea";
+    console.log("What is on the stack here?");
+    }
+    function main() {
+    let a;
+    let b;
+    a = "Hello";
+    funX(3, a);
+    b = "World";
+    }
+    main();
