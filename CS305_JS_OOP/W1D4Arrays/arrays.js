@@ -123,34 +123,22 @@ export function scoreExams(studentAnswers, correctAnswers) {
 
   /**
    * 
-   * @param {Number} rows 
-   * @param {Number} cols 
-   * @returns 
+   * @param {Number} arr1 
+   * @param {Number} arr2 
+   * @returns {Array} it returns multidimentional arrays
    */
-  export function generateArray(rows, cols) {
+  export function generateArray(arr1, arr2) {
     let result = [];
     let counter = 1;
-    for (let i = 0; i < rows; i++) {
+    for (let i = 0; i < arr1; i++) {
       let row = [];
-      for (let j = 0; j < cols; j++) {
+      for (let j = 0; j < arr2; j++) {
         row.push(counter++);
       }
       result.push(row);
     }
     return result;
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 let a = [1, 2, 3, 4];
@@ -167,4 +155,6 @@ let reverseArr = reverseArray(name);
 console.log(names);
 
 console.log(reverseArr);
+
+
 
