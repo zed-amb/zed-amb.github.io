@@ -137,8 +137,8 @@ console.log("-------------------------------------------")
 // Adding multidimensional array
 
 const matrix = [[1, 2, 3],
-                [4, 5, 6],
-                [7, 8, 9]];
+[4, 5, 6],
+[7, 8, 9]];
 
 function sumMatrix(arr) {
     let sum = 0;
@@ -304,8 +304,8 @@ function computeCharges(arry) {
     return cutomerArray;
 }
 
-const charges = [[1,2,3,4,5],[10,20,30,60], [300, 200, 100]];
- 
+const charges = [[1, 2, 3, 4, 5], [10, 20, 30, 60], [300, 200, 100]];
+
 console.log(computeCharges(charges));// [[3,5],[30,60],[200,300]]
 
 
@@ -314,20 +314,65 @@ console.log(computeCharges(charges));// [[3,5],[30,60],[200,300]]
 
 function largestPrimeFactor(num) {
     if (num <= 1) {
-      return 0;
+        return 0;
     }
-    
+
     let largestPrime = 2;
     for (let i = 2; i <= num; i++) {
-      while (num % i === 0) {
-        largestPrime = i;
-        num /= i;
-      }
+        while (num % i === 0) {
+            largestPrime = i;
+            num /= i;
+        }
     }
     return largestPrime;
-  }
+}
 
 
-  let largPrime = largestPrimeFactor(1);
+let largPrime = largestPrimeFactor(1);
 
-  console.log(largPrime);
+console.log(largPrime);
+
+let a = [1];
+let b = [1];
+let c = [1] === [1];
+console.log(c);
+
+/* Write code to create an array with elements "l", "m", "n" and then write a 
+function and call it with your array as the argument. The function should 
+log the elements to the console using an indexed for loop.
+ It should return the number of elements logged to the console. */
+
+function numElement(arr) {
+
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        count++;
+    }
+    return count;
+}
+
+let str = ["l", "m", "n"];
+
+console.log(numElement(str));
+
+
+function countElement(arr) {
+    let count = 0;
+    for (let elements of arr) {
+        count++;
+    }
+    return count;
+}
+
+
+
+//Call =back function
+console.log(countElement(str));
+
+
+let sayHi = function(){
+     console.log("Hi");
+}
+
+console.log(sayHi);
+
