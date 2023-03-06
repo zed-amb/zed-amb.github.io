@@ -3,8 +3,6 @@ import assert from "node:assert/strict";
 
 import {double, times100, myMap} from "./fnExps.js";
 
-
-
 /* 1.	1.	Write a function, double, that takes a number and returns 2 times the number..  */
 describe("double", function () {
     it("tests double 10", function () {
@@ -51,6 +49,6 @@ describe("times100", function () {
                 return num*3;}), [-30, 0, 30, 60]);
         });
         it("tests myMap on triples arrow function", function () {
-            assert.deepStrictEqual(myMap(testArray, num=> { return num*3;}), [-30, 0, 30, 60]);
+            assert.deepStrictEqual(myMap(testArray, num=> num*3), [-30, 0, 30, 60]);
         });
     });

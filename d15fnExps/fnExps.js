@@ -1,14 +1,4 @@
 
-
-
-//import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "./arrays.js";
-import {maxOfThree, sum, multiply} from "./arrays.js";
-"use strict";
-
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser
-*/ 
-//import {double, times100, myMap } from "./"; //add all of your function names here that you need for the node mocha tests
-
 /**
  * 
  * @param {number} number - any number times 2
