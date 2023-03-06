@@ -18,12 +18,18 @@
  
   }
 
-/**
- * 
- * @param {arr} arr- array of numbers 
- * @param {function} function - any function that takes a number as paramater
- * @returns  {Array} creates a new array with function mapped to each element
+/* 
+  @param {arr} arr- array of numbers 
+  @param {function} function - any function that takes a number as paramater
+  @returns  {Array} creates a new array with function mapped to each element
  */
+
+  /**
+   * 
+   * @param {arr} arr array of numbers 
+   * @param {function} anyfunction - that takes a number as paramater 
+   * @returns {Array}  creates a new array
+   */
    export function myMap(arr, anyfunction){
    let arr1=[];
    for( let element of arr){
