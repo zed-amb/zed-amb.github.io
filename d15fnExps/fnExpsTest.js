@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-import assert from "node:assert/strict"; 
+//import assert from "node:assert/strict"; 
 
 import {double, times100, myMap} from "./fnExps.js";
 
