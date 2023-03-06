@@ -3,5 +3,19 @@
     "mocha": "^10.2.0",
     "prompt-sync": "^4.2.0"
   },
-  "type": "module"
+  "type": "module",
+  "name": "zed-amb.github.io",
+  "version": "1.0.0",
+  "main": "config.js",
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
