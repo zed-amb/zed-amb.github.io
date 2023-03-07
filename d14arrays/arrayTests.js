@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 /* comment out the import assert line when running in the browser */
 
 
-import assert from "node:assert/strict"; 
+//import assert from "node:assert/strict"; 
 
 import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "../../d14arrays/arrays.js";
 
