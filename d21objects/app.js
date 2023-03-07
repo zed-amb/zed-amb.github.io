@@ -38,7 +38,7 @@ export function showTitles() {
 export function findTitles() {
     let titles = [];
 
-    //titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
+    titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
     // implement this and other functions
 
     for (let element of library) {
@@ -62,11 +62,13 @@ export function addBook(title, author, libraryID) {
     //alert("title:  " + title);
     const authorElement = document.getElementById("author");
     author = authorElement.value;
+    console.log("author is: ", author);
 
     let libIdElement = document.getElementById("libraryID");
     libIdElement = libIdElement.value;
+    console.log("Library ID is: ", libraryID);
 
-    const newID = library.length + 5000;  // hack to get a unique id for now
+    const newID = library.length + 50;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
 
     let newBook = { title, author, libraryID };
@@ -75,7 +77,6 @@ export function addBook(title, author, libraryID) {
     return newBook;
 
 }
-
 
 /**
  * 
