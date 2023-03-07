@@ -60,18 +60,22 @@ export function addBook(title, author, libraryID) {
     title = titleElement.value;
     console.log("title is: ", title);
     //alert("title:  " + title);
-    const authorElement = document.getElementById("author");
-    author = authorElement.value;
-    console.log("author is: ", author);
 
+    const bookAuthor = document.getElementById("author");
+    author = bookAuthor.value;
+    console.log("author is: ", author);
+/* 
     let libIdElement = document.getElementById("libraryID");
     libIdElement = libIdElement.value;
     console.log("Library ID is: ", libraryID);
-
-    const newID = library.length + 50;  // hack to get a unique id for now
+ */
+    const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
 
-    let newBook = { title, author, libraryID };
+    let newBook = {
+        title:title,
+        author:author,
+        libraryID:newID, };
 
     library.push(newBook);
     return newBook;
@@ -86,8 +90,8 @@ export function findAuthors() {
     //implement this
     let authors = [];
 
-    for (let elements of library) {
-        authors.push(elements.author);
+    for (let element of library) {
+        authors.push(element.author);
     }
     authors.sort();
     return authors;
@@ -128,7 +132,10 @@ which will be represented as a global array named libraryBooks.  createBook shou
 export function createBook(title, author, libraryID) {
     //implement this
 
-    let newBook = { title, author, libraryID };
+    let newBook = { 
+        title,
+        author,
+        libraryID, };
 
     library.push(newBook);
 
