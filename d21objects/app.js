@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
 which will be represented as a global array named libraryBooks.  createBook should return the newly created book.
@@ -37,14 +38,13 @@ export function showTitles() {
 export function findTitles() {
     let titles = [];
 
-
     //titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
     // implement this and other functions
 
-    for( let elements of library){
-        titles.push(elements.title);
+    for (let element of library) {
+        titles.push(element.title);
     }
-   titles.sort();
+    titles.sort();
     return titles;
 }
 
@@ -57,7 +57,7 @@ export function findTitles() {
  */
 export function addBook(title, author, libraryID) {
     const titleElement = document.getElementById("title"); //retrieves the book title textbox element
-     title = titleElement.value;
+    title = titleElement.value;
     console.log("title is: ", title);
     //alert("title:  " + title);
     const authorElement = document.getElementById("author");
@@ -69,50 +69,77 @@ export function addBook(title, author, libraryID) {
     const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
 
-   let newBook = {title, author, libraryID};
-    
-   library.push(newBook);
-   
-  return newBook;
+    let newBook = { title, author, libraryID };
+
+    library.push(newBook);
+    return newBook;
 
 }
+
 
 /**
  * 
  * @returns {Array} find all  authors in libraryBooks and return them in alphabetically ordered array.
  */
 export function findAuthors() {
-//implement this
+    //implement this
+    let authors = [];
 
-
+    for (let elements of library) {
+        authors.push(elements.author);
+    }
+    authors.sort();
+    return authors;
 }
+
 
 /**
  * 
  * @returns {Array} find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
 */
 export function findIDs() {
-//implement this
+    //implement this
+    const IDs = [];
+
+    for (let element of library) {
+        IDs.push(element.libraryID);
+    }
+    IDs.sort();
+    return IDs;
 }
 
 
-/**
+/*
  * @returns {Object} new book object
  * createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
 which will be represented as a global array named libraryBooks.  createBook should return the newly created book.
  */
-export function createBook(){
-//implement this
-    return null;
+
+/**
+ * 
+ * @param {String} title 
+ * @param {String} author 
+ * @param {String} libraryID 
+ * @returns {String} newBook 
+ */
+
+// eslint-disable-next-line require-jsdoc
+export function createBook(title, author, libraryID) {
+    //implement this
+
+    let newBook = { title, author, libraryID };
+
+    library.push(newBook);
+
+    return newBook;
 }
 
 /**
  * 
  * @returns {undefined} 
  */
-export function scramble(){
+export function scramble() {
     console.log("implement scramble if you have time ...");
 
 }
 
-  
