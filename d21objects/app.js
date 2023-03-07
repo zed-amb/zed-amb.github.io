@@ -55,19 +55,19 @@ export function findTitles() {
  * @param {Number} libraryID  the book ID
  * @returns {Array} arrays of newBook
  */
-export function addBook(title, author, libraryID) {
+export function addBook() {
     const titleElement = document.getElementById("title"); //retrieves the book title textbox element
-    title = titleElement.value;
+    const title = titleElement.value;
     console.log("title is: ", title);
     //alert("title:  " + title);
 
     const bookAuthor = document.getElementById("author");
-    author = bookAuthor.value;
+    const author = bookAuthor.value;
     console.log("author is: ", author);
  
-    let libIdElement = document.getElementById("libraryID");
-    libIdElement = libIdElement.value;
-    console.log("Library ID is: ", libraryID);
+    const libId = document.getElementById("libraryID");
+     const bookId = libId.value;
+    console.log("Library ID is: ", bookId);
  
     const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
