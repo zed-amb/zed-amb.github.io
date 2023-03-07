@@ -75,7 +75,7 @@ export function addBook() {
     let newBook = {
         title:title,
         author:author,
-        libraryID:newID, };
+        libraryID:bookId, };
 
     library.push(newBook);
     return newBook;
