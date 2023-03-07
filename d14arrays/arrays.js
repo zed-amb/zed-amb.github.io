@@ -1,3 +1,5 @@
+/* eslint-disable require-jsdoc */
+/* eslint-disable valid-jsdoc */
 /**
  * 
  * @param {number} a is a number
