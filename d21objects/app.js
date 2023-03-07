@@ -73,9 +73,9 @@ export function addBook(title, author, libraryID) {
     //finish the implementation -- get the author, create a book object, and add to the library array
 
     let newBook = {
-        title,
-        author,
-        libraryID, };
+        title:title,
+        author:author,
+        libraryID:newID, };
 
     library.push(newBook);
     return newBook;
