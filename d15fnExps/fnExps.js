@@ -17,12 +17,7 @@ export function double(number){
     return  number*100;
   
    }
- 
- /* 
-   @param {arr} arr- array of numbers 
-   @param {function} function - any function that takes a number as paramater
-   @returns  {Array} creates a new array with function mapped to each element
-  */
+
  
    /**
     * 
