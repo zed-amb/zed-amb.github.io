@@ -40,21 +40,41 @@ export function findTitles() {
 
     titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];  //FIX THIS!!
     // implement this and other functions
+
+    for( let elements of library){
+        titles.push(elements.title);
+    }
+   titles.sort();
     return titles;
 }
 
 /**
- * @returns {undefined} no return
- * Event handler for Add book button.  Creates and adds book to the library
+ * 
+ * @param {String} title - of the book
+ * @param {String} author author of the book
+ * @param {Number} libraryID  the book ID
+ * @returns {Array} arrays of newBook
  */
-export function addBook() {
+export function addBook(title, author, libraryID) {
     const titleElement = document.getElementById("title"); //retrieves the book title textbox element
-    const title = titleElement.value;
+     title = titleElement.value;
     console.log("title is: ", title);
     //alert("title:  " + title);
+    const authorElement = document.getElementById("author");
+    author = authorElement.value;
+
+    let libIdElement = document.getElementById("libraryID");
+    libIdElement = libIdElement.value;
 
     const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
+
+   let newBook = {title, author, libraryID};
+    
+   library.push(newBook);
+   
+  return newBook;
+
 }
 
 /**
@@ -63,6 +83,7 @@ export function addBook() {
  */
 export function findAuthors() {
 //implement this
+
 
 }
 
