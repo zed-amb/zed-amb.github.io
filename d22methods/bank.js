@@ -15,6 +15,7 @@ The bank object should have a transactionsDB property, which will be an array of
 const bank = {
     transactionsDB: [],
 };
+
 bank.transactionsDB = [
     { customerId: 1, customerTransactions: [10, 50, -40] },
     { customerId: 2, customerTransactions: [10, 10, -10] },
@@ -33,7 +34,7 @@ bank.debit = function (id, amount) {
     /* make sure current balance is > amount */
 //IMPLEMENT THIS
 if(this.getBalance(id)>amount){
-    this.saveTransaction(id,-amount)
+    this.saveTransaction(id,-amount);
 }
 
 };
