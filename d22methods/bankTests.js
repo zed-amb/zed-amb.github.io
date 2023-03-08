@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* comment out the import assert line when running in the browser */
-//import assert from "node:assert/strict";
+import assert from "node:assert/strict";
 
 import { bank } from "./bank.js";  //import objects used in the Mocha tests
 
