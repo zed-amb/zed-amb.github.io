@@ -74,4 +74,4 @@ return balance;
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 /* must be at end of file if are exporting an object so the export is after the definition */
-//module.exports = {bank }; //add all of your object names here that you need for the node mocha tests
+export default {bank }; //add all of your object names here that you need for the node mocha tests
