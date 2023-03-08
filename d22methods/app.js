@@ -7,14 +7,11 @@
 export function Accumulator(initialValue, increment) {
    //implement this
 
-   this.increment = increment,
       this.currentValue = initialValue,
-
+      this.increment = increment, 
       this.accumulate = function () {
-         this.currentValue = this.currentValue + this.increment;
-      }
-
-   this.report = function () {
+      this.currentValue = this.currentValue + this.increment;};
+      this.report = function () {
       return this.currentValue;
    };
 }
@@ -26,14 +23,10 @@ export function Calculator() {
    //implement this
 
    this.setValues = function (a, b) {
-      this.a = a;
-      this.b = b;
-   };
-   this.sum = function () {
-      return this.a + this.b;
-   };
-   this.mul = function () {
-      return this.a * this.b;
-   };
+       this.a = a;
+       this.b = b;
+      };
+   this.sum = function () {return this.a + this.b;};
+   this.mul = function () { return this.a * this.b;};
 
 }
