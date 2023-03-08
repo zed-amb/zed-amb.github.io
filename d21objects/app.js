@@ -53,7 +53,7 @@ export function findTitles() {
  * @param {String} title - of the book
  * @param {String} author author of the book
  * @param {Number} libraryID  the book ID
- * @returns {Array} arrays of newBook
+ * @returns {Object} newBook arrays of newBook
  */
 export function addBook() {
     const titleElement = document.getElementById("title"); //retrieves the book title textbox element

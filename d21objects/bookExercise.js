@@ -62,3 +62,53 @@ for(let key in salaries){
   
 console.log(sum);
 
+let hambisa = {
+  females: "Almaz, Alga Fere",
+  males: "Sgni, Anani, Zola",
+ wive1: "Askal",
+ wive2: "Desta",
+};
+
+hambisa.wealth = "land";
+
+
+console.log(hambisa);
+
+for(const key in hambisa){
+  //console.log(key);// it print properties
+  console.log(hambisa[key]);// prints the value in the property
+
+
+}
+
+/**
+ * 
+ * @param {object} obj it accepts any object
+ * @return{number} it returns multiplied number
+ */
+function multiplyNumeric(obj){
+  for(let key in obj){
+    if(typeof obj[key] == "number"){
+      obj[key] *= 2;
+    }
+  }
+}
+
+
+
+// before the call
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+
+console.log(menu);
+
+
+// after the call
+multiplyNumeric(menu);
+
+console.log(menu);
+
