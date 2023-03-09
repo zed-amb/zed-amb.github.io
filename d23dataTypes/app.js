@@ -13,30 +13,38 @@ export function ucFirst(str) {
   }
 }
 
+let str = "zelalem";
+
+console.log(ucFirst(str));
+
 /**
  * 
  * @param {String} str strings 
+ * @returns{boolean} it returns boolean if there is spam words
  */
-
 export function checkSpam(str) {
-  let newStr = str.toLowerCase();
-  return newStr.includes("viagra") || newStr.includes("xxx");
+  let spamStr = str.toLowerCase();
+  return spamStr.includes("viagra") || spamStr.includes("xxx");
 }
 
+console.log(checkSpam("viAGra"));
 
 /**
  * 
- * @param {*} str 
- * @param {*} maxlength 
+ * @param {String} str input string
+ * @param {number} maxlength num of worgs we need
+ * @returns{String} tranculated string
  */
 export function truncate(str, maxlength) {
   if (str.length > maxlength) {
-    let newStr = str.slice(0, maxlength - 1);
-    return newStr + "…";
+    return str.slice(0, maxlength - 1) + "…";
   } else {
     return str;
   }
 }
+
+
+
 /**
  * 
  * @param {Array} arr of numbers
@@ -45,12 +53,13 @@ export function truncate(str, maxlength) {
  */
 export function getMaxSubSum(arr) {
   let maxSum = 0;
-  let partialSum = 0;
+  let currentSum = 0;
 
   for (let item of arr) {
-    partialSum += item;
-    maxSum = Math.max(maxSum, partialSum);
-    if (partialSum < 0) partialSum = 0;
+    currentSum += item;
+    maxSum = Math.max(maxSum, currentSum);
+    if (currentSum < 0)
+     currentSum = 0;
   }
 
   return maxSum;

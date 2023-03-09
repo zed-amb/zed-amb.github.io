@@ -55,7 +55,7 @@ let customerBalance = 0;
     return customerBalance;
 };
 
-
+console.log(bank.getBalance(3));
 
 /**
  * @returns {number}  returns sum of all balances
@@ -72,5 +72,5 @@ return balance;
 };
 
 
-
+console.log(bank.bankBalance());
 
