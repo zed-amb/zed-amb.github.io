@@ -68,8 +68,8 @@ export function getMaxSubSum(arr) {
 
 /**
  * 
- * @param {*} str 
- * @returns 
+ * @param {String} str str with - charcter
+ * @returns {String} it returns camelized str
  */
 export function camelize(str) {
   if (str === "") {
@@ -90,8 +90,8 @@ export function camelize(str) {
 
 /**
  * 
- * @param {*} money 
- * @returns 
+ * @param {Number} money with currency charact
+ * @returns {Number} returns number without currency charct
  */
 export function extractCurrencyValue(money) {
   const moneyValue = money.slice(1);
