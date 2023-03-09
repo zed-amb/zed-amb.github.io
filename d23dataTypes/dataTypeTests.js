@@ -47,13 +47,13 @@ describe("truncate", function() {
   });
 });
 
-/* describe("extractCurrencyValue", function() {
+ describe("extractCurrencyValue", function() {
 
    it("for the string $120 returns the number 120", function() {
      assert.strictEqual(extractCurrencyValue('$120'), 120);
    });
 
-});*/
+});
 
 describe("getMaxSubSum", function() {
     it("maximal subsum of [1, 2, 3] equals 6", function() {
@@ -93,7 +93,7 @@ describe("getMaxSubSum", function() {
     });
   });
 
-  
+
 describe("camelize", function() {
 
     it("leaves an empty line as is", function() {
