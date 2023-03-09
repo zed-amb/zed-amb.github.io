@@ -43,7 +43,9 @@ export function truncate(str, maxlength) {
   }
 }
 
+let sampleStr = "A method is an action done on an object, and it is a property that holds a function definition";
 
+console.log(truncate(sampleStr, 40));
 
 /**
  * 
