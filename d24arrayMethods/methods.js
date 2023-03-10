@@ -1,24 +1,41 @@
-"use strict"
+/**
+ * 
+ * @param {Array} arr any array
+ * @param {Number} a min
+ * @param {Number} b max 
+ * @returns {Array} returns filtered array
+ */
+export function filterRange(arr, a, b) {
+    let filtered = arr.filter(num => num >= 1 && num <= 4);
+    return filtered;
+}
 
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator }; //add all of your function names here that you need for the node mocha tests
+let nmbr = [5, 3, 8, 1];
+let result = filterRange(nmbr, 1, 4);
+console.log(result);
+
+/**
+ * 
+ * @param {Array} arr of numbers
+ * @param {Number} a min
+ * @param {Number} b max
+ * @returns {Array} returns filtered array without creating new array
+ */
+export function filterRangeInPlace(arr, a, b) {
+    for (let number in arr) {
+        if ((arr[number] < a) || (arr[number] > b)) {
+            arr.splice(number, 1);
+        }
+    }
+}
 
 
-function filterRange(arr, a, b) {
-  }
+export function Calculator() {
+}
 
- 
-  function filterRangeInPlace(arr, a, b) {
-
-  }
- 
-
-  function Calculator() {
-  }
-
-  function unique(arr) {
-  }
+export function unique(arr) {
+}
 
 
-  function groupById(array) {
-  }
+export function groupById(array) {
+}

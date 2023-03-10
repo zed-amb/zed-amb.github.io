@@ -1,38 +1,37 @@
 "use strict"
 /* eslint-disable */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge}; //add all of your function names here that you need for the node mocha tests
 
 
-function doubleNums(arr){
+export function doubleNums(arr){
 return arr.map(num => num * 2);
 }
 
-function doubleAges(arr){
+export function doubleAges(arr){
+    let ages = arr.map(age => age*2);
+}
+
+export function filterEven(arr){
 
 }
 
-function filterEven(arr){
+export function filterOver10(arr) {
 
 }
 
-function filterOver10(arr) {
+export function findEvenNum(arr){
 
 }
 
-function findEvenNum(arr){
+export function findEvenAge(arr){
 
 }
 
-function findEvenAge(arr){
+export function includesEvenNum(arr){
 
 }
 
-function includesEvenNum(arr){
-
-}
-
-function includesEvenAge(arr){
+export function includesEvenAge(arr){
 
 }
 
