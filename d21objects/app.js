@@ -65,14 +65,14 @@ export function addBook() {
     const author = bookAuthor.value;
     console.log("author is: ", author);
  
-    const libId = document.getElementById("libraryID");
+    const libId = document.getElementById("library");
      const bookId = libId.value;
     console.log("Library ID is: ", bookId);
  
     const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
 
-    let newBook = {
+    let newBook = {  
         title:title,
         author:author,
         libraryID:bookId, };
