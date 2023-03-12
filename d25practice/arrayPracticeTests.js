@@ -1,15 +1,9 @@
-"use strict";
-/* global assert doubleNums  doubleAges filterEven filterOver10 findEvenNum findEvenAge */
-/* comment out the node specific code when going to the browser
-const assert = require("assert");  //always need this with node
-const myExports = require("./arrayPractice.js");  //with node need the name of your file with your functions here
-const doubleNums = myExports.doubleNums;  //do this for all of the functions used in the Mocha tests
-const doubleAges = myExports.doubleAges;
-const filterEven = myExports.filterEven;
-const filterOver10 = myExports.filterOver10;
-const findEvenNum = myExports.findEvenNum;
-const findEvenAge = myExports.findEvenAge;  
-*/ 
+/* comment out the import assert line when running in the browser */
+//import assert from "node:assert/strict"; 
+
+import { doubleNums, doubleAges, filterEven, filterOver10, findEvenAge, findEvenNum, includesEvenAge, findSum, findAverage, findMax, maxAges, findAverageEven, findAverageOdd } from "./arrayPractice.js";
+
+
 
 let numArray;
 let peopleArray;
@@ -46,7 +40,7 @@ describe("filter practice", function () {
 
     it("filter all age > 10", function () {
         assert.deepEqual(filterOver10(peopleArray),
-            [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80  }]);
+            [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }]);
         assert.deepEqual(peopleArray,
             [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }]);
     });
@@ -57,7 +51,7 @@ describe("filter practice", function () {
     });
     it("find even age ", function () {
         assert.deepEqual(findEvenAge(peopleArray), { name: "William", age: 6 });
-        const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81  }];
+        const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
         assert.deepEqual(findEvenAge(peopleOddAge), undefined);
     });
 
@@ -67,7 +61,38 @@ describe("filter practice", function () {
     });
 
     /* complete the following similar to includes even test */
-    it("includes even age -- write this test");
+    it("includes even age", function () {
+        assert.strictEqual(includesEvenAge(peopleArray), true);
+        const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
+        assert.deepEqual(includesEvenAge(peopleOddAge), false);
+    });
 
+});
+
+
+
+describe("reduce Practice", function () {
+    beforeEach(function () {
+        numArray = [5, 0, 7, 77, -20, 300, 51, 2];
+        peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+    });
+    it("find sum of numbers", function () {
+        assert.strictEqual(findSum(numArray), 422);
+    });
+    it("find average of numbers", function () {
+        assert.strictEqual(findAverage(numArray), 52.75);
+    });
+    it("find max of numbers", function () {
+        assert.strictEqual(findMax(numArray), 300);
+    });
+    it("find max of ages", function () {
+        assert.deepEqual(maxAges(peopleArray), { name: "Barney", age: 80 });
+    });
+    it("find average of even ages", function () {
+        assert.strictEqual(findAverageEven(peopleArray), 43);
+    });
+    it("find average of odd ages", function () {
+        assert.strictEqual(findAverageOdd(peopleArray), 14);
+    });
 });
 
