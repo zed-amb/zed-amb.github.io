@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable id-length */
 /* comment out the import assert line when running in the browser */
 //import assert from "node:assert/strict"; 
