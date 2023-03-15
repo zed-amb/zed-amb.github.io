@@ -4,8 +4,6 @@
 
 import { inArray, inBetween, byField, makeArmy } from "./closures.js";
 
-
-
 describe("inArray", function () {
     let arr = [1, 2, 3, 4, 5, 6, 7];
 
