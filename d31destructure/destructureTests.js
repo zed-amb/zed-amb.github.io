@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
 /* comment out the import assert line when running in the browser */
-//import assert from "node:assert/strict"; 
+import assert from "node:assert/strict"; 
 
-import { topSalary } from "./destructure.js";
+import { topSalary} from "./destructure.js";
+
 
  
     
@@ -28,3 +29,4 @@ describe("topSalary", function() {
       assert.strictEqual( topSalary({}), null);
     });
   });
+
