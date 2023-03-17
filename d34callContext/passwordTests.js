@@ -4,6 +4,10 @@
 
 import { user, askPassword, user2, askPassword2  } from "./passwords.js";
 
+
+/* modify the book functions (in the Function binding section tasks) to return values instead of displaying alerts, and to take the passwords as parameters rather than prompting for them.  
+Then write the additional mocha tests to use call and apply instead of bind.
+*/
 describe("fix function that loses 'this'", function () {
     it("tests rockstar", function () {
       assert.strictEqual(askPassword.call(user, user.loginOk, user.loginFail, "rockstar"),"John logged in");
@@ -13,19 +17,19 @@ describe("fix function that loses 'this'", function () {
       assert.strictEqual(askPassword.call(user, user.loginOk, user.loginFail, "1234"),"John failed to log in" );
     });
   
-    it("Tests call method with rockstar", function () {
+    it("tests call method with rockstar", function () {
       assert.strictEqual(askPassword.call(user, user.loginOk, user.loginFail, "rockstar"),"John logged in");
     });
   
-    it("Tests call method with wrong password", function () {
+    it("tests call method with wrong password", function () {
       assert.strictEqual(askPassword.call(user, user.loginOk, user.loginFail, "1234"),"John failed to log in");
     });
   
-    it("Tests apply method with rockstar", function () {
+    it("tests apply method with rockstar", function () {
       assert.strictEqual(askPassword.apply(user, [user.loginOk, user.loginFail, "rockstar"]),"John logged in");
     });
   
-    it("Tests apply method with wrong password", function () {
+    it("tests apply method with wrong password", function () {
       assert.strictEqual(askPassword.apply(user, [user.loginOk, user.loginFail, "1234"]), "John failed to log in");});
   });
   
