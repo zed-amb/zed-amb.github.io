@@ -19,6 +19,7 @@ export function topSalary(salaries){
     return maxName;
     }
 
+
     export function topSalaryy(...salaries) {
       let maxSalary = 0;
       let maxName = null;
