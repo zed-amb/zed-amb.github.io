@@ -1,10 +1,10 @@
 /* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict";
+//import assert from "node:assert/strict";
 
-import { Account } from "./account.js";
-import { Bank } from "./bank.js";
-import { CheckingAccount } from "./checkingaccount.js";
-import { SavingsAccount } from "./savingsaccount.js";
+//import { Account } from "./account.js";
+//import { Bank } from "./bank.js";
+//import { CheckingAccount } from "./checkingaccount.js";
+//import { SavingsAccount } from "./savingsaccount.js";
 
 
 describe("Account class", () => {
